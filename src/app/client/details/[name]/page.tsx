@@ -1,5 +1,5 @@
 'use client';
-import { PokemonType, capitalize, pokemonTypeColors } from '@/app/components/utils';
+import { capitalize, PokemonType, pokemonTypeColors } from '@/app/components/utils';
 import { pokedex } from '@/fetcher/pokedex';
 import { Card, CardBody, Flex, Heading, Image, Stat, StatGroup, StatLabel, StatNumber, Tag } from '@chakra-ui/react';
 import useSWR from 'swr';

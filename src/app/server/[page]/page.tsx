@@ -1,8 +1,6 @@
 import { pokedex } from '@/fetcher/pokedex';
 import { Button, Flex, Grid, GridItem, Heading, Text } from '@chakra-ui/react';
-import useSWR from 'swr';
 import PokemonCard from '../../components/pokemonCard';
-import ErrorComponent from '../../components/errorComponent';
 import Link from 'next/link';
 
 const getAll = (limit: number, offset: number) => pokedex.getPokemonsList({ limit, offset });
@@ -30,7 +28,7 @@ export default async function PokemonDetails({ params }: {
             <Grid templateColumns="repeat(5, 1fr)" gap={6} w={'100%'} h={'100%'} p={6} overflow={'auto'}>
                 {data?.results.map((result) => (
                     <GridItem w={'100%'} key={result.name}>
-                        <PokemonCard renderType={"server"} id={result.name} />
+                        <PokemonCard renderType={'server'} id={result.name} />
                     </GridItem>
                 ))}
             </Grid>

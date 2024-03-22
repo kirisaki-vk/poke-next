@@ -1,5 +1,5 @@
 import { redirect } from 'next/navigation';
 
 export default function Client() {
-    redirect("/client/1")
+    redirect('/client/1');
 }
