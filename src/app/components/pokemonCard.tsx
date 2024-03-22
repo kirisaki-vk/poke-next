@@ -19,6 +19,7 @@ import Link from "next/link";
 
 export type PokemonCardProps = {
   id: string | number;
+  renderType: "client" | "server"
 };
 
 export default function PokemonCard(props: PokemonCardProps) {
@@ -42,7 +43,7 @@ export default function PokemonCard(props: PokemonCardProps) {
       onMouseLeave={() => off()}
       onClick={onOpen}
       as={Link}
-      href={`/details/${props.id}`}
+      href={`/${props.renderType}/details/${props.id}`}
     >
       <CardBody>
         <Flex gap={5}>

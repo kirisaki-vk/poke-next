@@ -30,16 +30,16 @@ export default async function PokemonDetails({ params }: {
             <Grid templateColumns="repeat(5, 1fr)" gap={6} w={'100%'} h={'100%'} p={6} overflow={'auto'}>
                 {data?.results.map((result) => (
                     <GridItem w={'100%'} key={result.name}>
-                        <PokemonCard id={result.name} />
+                        <PokemonCard renderType={"server"} id={result.name} />
                     </GridItem>
                 ))}
             </Grid>
             <Flex w={'100%'} justifyContent={'space-between'} px={10} my={4} alignItems={'center'}>
                 <Button colorScheme="blue" isActive={data?.previous === null} as={Link}
-                        href={`/${params.page - 1}`}>Previous</Button>
+                        href={`/server/${params.page - 1}`}>Previous</Button>
                 <Text fontWeight={'bold'}>{params.page}</Text>
                 <Button colorScheme="blue" isActive={data?.next === null} as={Link}
-                        href={`/${+params.page + 1}`}>Next</Button>
+                        href={`/server/${+params.page + 1}`}>Next</Button>
             </Flex>
         </Flex>
     );
