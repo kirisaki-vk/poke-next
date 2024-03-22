@@ -1,22 +1,24 @@
-"use client";
-import { pokedex } from "@/fetcher/pokedex";
 import {
-  Box,
-  Card,
-  CardBody,
-  CardHeader,
-  Flex,
-  Grid,
-  GridItem,
-  Heading,
-  Text,
-  Image,
-  Button,
-} from "@chakra-ui/react";
-import { useEffect, useState } from "react";
-import useSWR from "swr";
-import PokemonCard from "./components/pokemonCard";
-import ErrorComponent from "./components/errorComponent";
+    Button,
+    Flex,
+    Heading,
+    Text,
+} from '@chakra-ui/react';
+import Link from 'next/link';
 
 export default function Home() {
-  }
+    return <Flex
+        w={'100vw'}
+        h={'100vh'}
+        justifyContent={'center'}
+        alignItems={'center'}
+        direction={"column"}
+    >
+        <Heading>Welcome to Poke-next</Heading>
+        <Text>Please select a rendering method to start</Text>
+        <Flex justifyContent={'center'} alignItems={'center'} gap={5}>
+            <Button as={Link} href={'/server'} colorScheme={"blue"}>Server</Button>
+            <Button as={Link} href={'/client'} colorScheme={"green"}>Client</Button>
+        </Flex>
+    </Flex>;
+}
