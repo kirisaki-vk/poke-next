@@ -4,8 +4,8 @@ import Image from "next/image";
 export default function ErrorComponent() {
   return (
     <Flex
-      w={"100%"}
-      h={"100%"}
+      w={"100vw"}
+      h={"100vh"}
       justifyContent={"center"}
       alignItems={"center"}
       direction={"column"}
