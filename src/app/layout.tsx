@@ -1,5 +1,10 @@
 // app/layout.tsx
+import { Metadata } from "next";
 import { Providers } from "./providers";
+
+export const metadata: Metadata = {
+  icons: "/pokenext.png"
+}
 
 export default function RootLayout({
   children,

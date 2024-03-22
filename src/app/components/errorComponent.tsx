@@ -12,7 +12,7 @@ export default function ErrorComponent() {
     >
         <Image alt="pika-sad" src={"/sad_pika.png"} width={120} height={120}/>
       <Heading>Uh Oh! Pikachu made a mess again</Heading>
-      <Text>We can't process your request for now</Text>
+      <Text>We can&apost process your request for now</Text>
     </Flex>
   );
 }

@@ -3,8 +3,8 @@ import { pokedex } from "@/fetcher/pokedex";
 import { Button, Flex, Grid, GridItem, Heading, Text } from "@chakra-ui/react";
 import { useState } from "react";
 import useSWR from "swr";
-import PokemonCard from "../components/pokemonCard";
-import ErrorComponent from "../components/errorComponent";
+import PokemonCard from "../../components/pokemonCard";
+import ErrorComponent from "../../components/errorComponent";
 import Link from "next/link";
 
 export default function PokemonDetails({ params }: {
@@ -44,7 +44,7 @@ export default function PokemonDetails({ params }: {
       )}
       <Flex w={"100%"} justifyContent={"space-between"} px={10} my={4} alignItems={"center"}>
         <Button colorScheme="blue" isActive={data?.previous === null} as={Link} href={`/${params.page - 1}`}>Previous</Button>
-        <Text>{params.page}</Text>
+        <Text fontWeight={"bold"}>{params.page}</Text>
         <Button colorScheme="blue" isActive={data?.next === null} as={Link} href={`/${+params.page + 1}`}>Next</Button>
       </Flex>
     </Flex>
